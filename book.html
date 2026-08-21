@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book — ROCK</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Oswald:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body data-page="book">
+    <header class="site-header" data-site-header></header>
+    <main class="page">
+      <div class="wrap page-grid">
+        <div>
+          <p class="kicker">Consult</p>
+          <h1>Thirty minutes. No package pitch.</h1>
+          <p class="page-lede">
+            Tell Rock what your weeks look like and what you want on the bar in six months. You’ll leave with a clear next step — 1:1, small group, or “not yet.”
+          </p>
+          <dl class="muted" style="margin-top: 2.5rem">
+            <div style="margin-bottom: 1rem">
+              <dt class="kicker">Studio</dt>
+              <dd style="margin: 0.25rem 0 0; color: var(--fg)">Atlantic County, NJ</dd>
+            </div>
+            <div style="margin-bottom: 1rem">
+              <dt class="kicker">Hours</dt>
+              <dd style="margin: 0.25rem 0 0">Mon–Thu 6:00–8:00a and 4:30–8:00p<br />Saturday 8:00a–12:00p</dd>
+            </div>
+            <div>
+              <dt class="kicker">Direct</dt>
+              <dd style="margin: 0.25rem 0 0">
+                <a href="https://www.instagram.com/warren_rock_massey/">@warren_rock_massey</a><br />
+                <a href="mailto:train@rockmassey.co">train@rockmassey.co</a>
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+        <div>
+          <form class="form" data-mailto-form data-subject="Consult request — ROCK">
+            <div class="form-row">
+              <label>Name<input name="Name" required autocomplete="name" /></label>
+              <label>Email<input name="Email" type="email" required autocomplete="email" /></label>
+            </div>
+            <label>Phone<input name="Phone" type="tel" autocomplete="tel" /></label>
+            <label>
+              Training history
+              <select name="Experience">
+                <option value="new">New to lifting</option>
+                <option value="some" selected>Some gym time</option>
+                <option value="solid">Consistent already</option>
+              </select>
+            </label>
+            <label>Goal<input name="Goal" placeholder="Get stronger, drop fat, first meet…" /></label>
+            <label>Preferred time<input name="Preferred time" placeholder="Early morning, after work…" /></label>
+            <label>Anything else<textarea name="Message"></textarea></label>
+            <p class="form-note">Opens your email app with the details filled in. You can also DM @warren_rock_massey.</p>
+            <button class="btn btn-full" type="submit">Send request</button>
+          </form>
+          <div class="ok">
+            <p style="font-family: var(--display); font-size: 1.85rem">You're on the list.</p>
+            <p class="muted" style="margin-top: 0.75rem">Finish sending the email if your mail app opened. Rock will follow up.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="site-footer" data-site-footer></footer>
+    <script src="js/site.js"></script>
+  </body>
+</html>
