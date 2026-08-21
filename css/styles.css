@@ -335,16 +335,6 @@ button, .btn { cursor: pointer; font-family: inherit; }
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-}
-.card:hover {
-  transform: translateY(-3px);
-  border-color: #3a3a3e;
-  box-shadow: 0 12px 32px rgb(0 0 0 / 0.35);
-}
-@media (prefers-reduced-motion: reduce) {
-  .card { transition: none; }
-  .card:hover { transform: none; box-shadow: none; }
 }
 .card h3 { font-size: 1.85rem; margin-top: 0.75rem; }
 .price { font-family: var(--display); font-size: 2.25rem; margin-top: 0.5rem; }
@@ -358,10 +348,6 @@ button, .btn { cursor: pointer; font-family: inherit; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.5rem;
-  transition: border-color 0.25s ease;
-}
-.quote:hover {
-  border-color: #3a3a3e;
 }
 .quote footer {
   margin-top: 1.25rem;
