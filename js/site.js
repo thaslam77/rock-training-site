@@ -18,8 +18,11 @@ function headerHtml() {
   return `
     <div class="header-inner wrap">
       <a class="logo" href="index.html">
-        <span class="logo-name">ROCK</span>
-        <span class="logo-region">South Jersey</span>
+        <img class="logo-mark" src="images/rock-steady-mark.png" alt="Rock Steady" />
+        <span class="logo-text">
+          <span class="logo-name">ROCK STEADY</span>
+          <span class="logo-region">South Jersey</span>
+        </span>
       </a>
       <nav class="nav-desktop">${links}</nav>
       <div class="header-actions">
@@ -42,13 +45,18 @@ function footerHtml() {
   return `
     <div class="footer-grid wrap">
       <div>
-        <p class="footer-name">ROCK</p>
-        <p class="muted" style="margin-top:0.75rem;max-width:16rem">Show up. Lift. Repeat.</p>
+        <div class="footer-brand">
+          <img src="images/rock-steady-mark.png" alt="" />
+          <div>
+            <p class="footer-name">ROCK STEADY</p>
+            <p class="muted" style="margin-top:0.5rem;max-width:16rem">Show up. Lift. Repeat.</p>
+          </div>
+        </div>
       </div>
       <div class="footer-col">
         <p class="kicker">Studio</p>
         <p>Warren “Rock” Massey</p>
-        <p class="muted">Personal trainer · South Jersey</p>
+        <p class="muted">NASM-CPT · Training since 2010 · South Jersey</p>
         <p class="muted" style="margin-top:0.5rem">Atlantic County, NJ</p>
       </div>
       <div class="footer-col">
@@ -56,7 +64,7 @@ function footerHtml() {
         <a href="book.html">Book a consult</a>
         <a href="programs.html">Online program waitlist</a>
         <a href="https://www.instagram.com/warren_rock_massey/" target="_blank" rel="noreferrer">@warren_rock_massey</a>
-        <a href="mailto:train@rockmassey.co">train@rockmassey.co</a>
+        <a href="mailto:Rocksteady1573@gmail.com">Rocksteady1573@gmail.com</a>
       </div>
     </div>
     <div class="footer-bar">Private coaching · South Jersey</div>
@@ -84,7 +92,7 @@ document.querySelectorAll("[data-mailto-form]").forEach((form) => {
       if (String(value).trim()) lines.push(`${key}: ${value}`);
     });
     const body = encodeURIComponent(lines.join("\n"));
-    window.location.href = `mailto:train@rockmassey.co?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:Rocksteady1573@gmail.com?subject=${subject}&body=${body}`;
     const ok = form.parentElement.querySelector(".ok");
     if (ok) {
       form.hidden = true;
@@ -92,3 +100,26 @@ document.querySelectorAll("[data-mailto-form]").forEach((form) => {
     }
   });
 });
+
+
+/* Scroll reveal */
+(function () {
+  const els = document.querySelectorAll(".reveal");
+  if (!els.length) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    els.forEach((el) => el.classList.add("is-visible"));
+    return;
+  }
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    },
+    { rootMargin: "0px 0px -8% 0px", threshold: 0.12 }
+  );
+  els.forEach((el) => io.observe(el));
+})();
